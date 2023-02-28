@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int idade;
+    double salario, altura;
+
+    printf("Digite a idade: ");
+    scanf("%d", &idade);
+    printf("Digie o valor do salario: ");
+    scanf("%lf", & salario);
+    printf("Digite a altura: ");
+    scanf("%lf", &altura);
+
+    printf("\n");
+    printf("Idade: %d", idade);
+    printf("\nSalario: %.3lf", salario);
+    printf("\nAltura: %.2lf", altura);
+
+    return 0;
+}
