@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+void limpar_entrada()
+{
+    char c;
+    while ((c = getchar()) != '\n' && c != EOF) {}
+}
+
+void ler_texto(char *buffer, int length)
+{
+    fgets(buffer, length, stdin);
+    strtok(buffer,"\n");
+}
+
+int main()
+{
+
+    int a, b;
+    char nomeA[100], nomeB[100];
+
+    printf("Digite primeiro nome: ");
+    ler_texto(nomeA, 50);
+    printf("Digie primeira idade: ");
+    scanf("%d",&a);
+    limpar_entrada();
+    printf("Digite segundo nome: ");
+    ler_texto(nomeB, 50);
+    printf("Digite segunda idade: ");
+    scanf("%d",&b);
+
+    printf("Nome = %s", nomeA);
+    printf("\nIdade = %d", a);
+    printf("\nNome = %s", nomeB);
+    printf("\nIdade = %d", b);
+
+    return 0;
+}
