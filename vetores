@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i;
+
+    printf("Quantos numeros voce vai digitar? ");
+    scanf("%d",&n);
+
+    double vet[50];
+
+    for(i =0; i < n; i++)
+    {
+        printf("Digite %d a numero: ", i+1);
+        scanf("%lf",&vet[i]);
+    }
+
+    printf("\nNUMEROS DIGITADOS: \n");
+    for(i = 0; i < n; i++)
+    {
+        printf("%.0lf\n", vet[i]);
+    }
+
+    return 0;
+}
