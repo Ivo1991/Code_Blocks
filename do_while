@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+void limpa_entrada()
+{
+    char c;
+    while((c = getchar()) != '\n' && c != EOF) {}
+}
+
+int main()
+{
+    double n1, n2, media;
+    char resp;
+
+    do
+    {
+        printf("Digite primeira nota: ");
+        scanf("%lf", &n1);
+        limpa_entrada();
+        printf("Digite segunda nota: ");
+        scanf("%lf", &n2);
+        limpa_entrada();
+
+        media = (n1 + n2) / 2;
+
+        printf("MEDIA DO ALUNO = %.1lf", media);
+
+        if(media >= 6.0)
+        {
+            printf("\nALUNO APROVADO!!!");
+        }
+        else
+        {
+            printf("\nALUNO REPROVADO :(");
+        }
+
+        printf("\nDeseja somar outra media (s/n)? ");
+        scanf("%c", &resp);
+    }
+    while(resp == 's');
+
+    return 0;
+}
