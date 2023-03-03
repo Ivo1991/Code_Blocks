@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    double largura, comprimento, valorMt, areaTotal, preco;
+
+    printf("Digite a largura do terreno: ");
+    scanf("%lf",&largura);
+    printf("Digite o comprimento do terreno: ");
+    scanf("%lf",&comprimento);
+    printf("Digite o valor do metro quadrado: ");
+    scanf("%lf",&valorMt);
+
+    areaTotal = largura * comprimento;
+    preco = valorMt * areaTotal;
+
+    printf("Area do terreno = %.2lf\n", areaTotal);
+    printf("Preco do terreno = %.2lf", preco);
+
+    return 0;
+}
